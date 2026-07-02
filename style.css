@@ -494,6 +494,10 @@ img {
     border-left: 4px solid var(--theme-nat);
 }
 
+.solution-content {
+    text-align: center;
+}
+
 .solution-content h2 {
     font-size: 2.2rem;
     margin-bottom: 20px;
@@ -507,19 +511,23 @@ img {
 
 .solution-list {
     list-style: none;
+    max-width: 600px;
+    margin: 30px auto 0 auto;
 }
 
 .solution-list li {
     display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 .list-icon {
     color: var(--color-success);
-    font-size: 1.25rem;
-    margin-top: 3px;
+    font-size: 1.5rem;
+    margin-bottom: 4px;
 }
 
 .solution-list li strong {
