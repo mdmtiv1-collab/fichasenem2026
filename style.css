@@ -1183,6 +1183,14 @@ img {
     color: var(--color-text-muted);
 }
 
+.bonus-sub-list-inline {
+    font-size: 0.76rem;
+    color: var(--color-success);
+    font-weight: 600;
+    margin-top: 3px;
+    display: block;
+}
+
 .include-value {
     font-size: 0.9rem;
     font-weight: 600;
@@ -1688,5 +1696,65 @@ img {
     .footer-container {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+
+    /* Bonus Section Mobile layout: 3 on top, 2 below */
+    .bonus-grid-wrapper {
+        margin-top: 30px;
+        gap: 15px;
+    }
+    
+    .bonus-row-top {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+    
+    .bonus-row-bottom {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .bonus-card {
+        width: 100%;
+        padding: 10px 6px;
+        border-radius: 6px;
+    }
+    
+    .bonus-img-container {
+        height: 120px;
+        margin-bottom: 8px;
+    }
+    
+    .bonus-info h3 {
+        font-size: 0.72rem;
+        margin-bottom: 4px;
+        line-height: 1.2;
+    }
+    
+    .bonus-desc-text {
+        display: none;
+    }
+    
+    .bonus-price {
+        font-size: 0.65rem;
+    }
+    
+    .price-old {
+        font-size: 0.62rem;
+    }
+    
+    .price-free {
+        font-size: 0.72rem;
+    }
+    
+    .bonus-badge-free {
+        font-size: 0.52rem;
+        padding: 1px 4px;
+        top: 8px;
+        right: 8px;
     }
 }
