@@ -163,4 +163,33 @@ document.addEventListener('DOMContentLoaded', () => {
             closeModal(successModal);
         }
     });
+
+    // ==========================================
+    // PRESERVE UTM PARAMETERS ON ALL LINKS
+    // ==========================================
+    const preserveUtms = () => {
+        const queryParams = window.location.search;
+        if (!queryParams) return;
+
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href && !href.startsWith('#') && !href.startsWith('javascript:')) {
+                try {
+                    const url = new URL(href, window.location.origin);
+                    // Combina os parâmetros existentes com os novos da URL atual
+                    const currentParams = new URLSearchParams(queryParams);
+                    currentParams.forEach((value, key) => {
+                        url.searchParams.set(key, value);
+                    });
+                    link.setAttribute('href', url.toString());
+                } catch (e) {
+                    console.error('Error preserving UTMs for link:', href, e);
+                }
+            }
+        });
+    };
+
+    // Executa imediatamente e após alterações dinâmicas
+    preserveUtms();
 });
