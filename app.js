@@ -78,7 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = ''; // Re-enable scroll background
     };
 
-    // Event listeners to open checkout
+    // Event listeners to open checkout (Desativado para ir direto para o link da Wiapy)
+    /*
     if (openCheckoutBtn) {
         openCheckoutBtn.addEventListener('click', () => openModal(checkoutModal));
     }
@@ -89,6 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
             openModal(checkoutModal);
         });
     }
+    */
 
     // Close buttons logic
     closeBtns.forEach(btn => {
