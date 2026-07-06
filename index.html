@@ -11,6 +11,9 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
     
+    <!-- Preload Hero Image for LCP -->
+    <link rel="preload" href="assets/mockup.jpg?v=2" as="image" type="image/jpeg">
+
     <!-- CSS File -->
     <link rel="stylesheet" href="style.css">
     
@@ -40,7 +43,7 @@
                     
                     <!-- Imagem do Mockup Oficial Abaixo da Subheadline -->
                     <div class="hero-media-centered">
-                        <img src="assets/mockup.jpg?v=2" alt="Mockup Oficial das 75 Fichas Ilustrativas do ENEM" class="mockup-img-centered" width="800" height="500">
+                        <img src="assets/mockup.jpg?v=2" alt="Mockup Oficial das 75 Fichas Ilustrativas do ENEM" class="mockup-img-centered" width="800" height="500" fetchpriority="high">
                     </div>
                     
                     <div class="hero-cta-wrapper">
@@ -140,42 +143,42 @@
                         <div class="slider-track">
                             <!-- Ficha de Capa (Oficial) -->
                             <div class="slider-card image-card-theme">
-                                <img src="assets/pagina8.jpg?v=2" alt="Capa Oficial - Fichas Desenhadas ENEM" class="slider-img" loading="lazy" width="400" height="566">
+                                <img src="assets/pagina8.jpg?v=2" alt="Capa Oficial - Fichas Desenhadas ENEM" class="slider-img" loading="lazy" width="400" height="566" fetchpriority="low">
                             </div>
                             
                             <!-- Ficha 1 -->
                             <div class="slider-card image-card-theme">
-                                <img src="assets/pagina1.jpg" alt="Ficha de Amostra ENEM 1" class="slider-img" loading="lazy" width="400" height="566">
+                                <img src="assets/pagina1.jpg" alt="Ficha de Amostra ENEM 1" class="slider-img" loading="lazy" width="400" height="566" fetchpriority="low">
                             </div>
 
                             <!-- Ficha 2 -->
                             <div class="slider-card image-card-theme">
-                                <img src="assets/pagina2.jpg" alt="Ficha de Amostra ENEM 2" class="slider-img" loading="lazy" width="400" height="566">
+                                <img src="assets/pagina2.jpg" alt="Ficha de Amostra ENEM 2" class="slider-img" loading="lazy" width="400" height="566" fetchpriority="low">
                             </div>
 
                             <!-- Ficha 3 -->
                             <div class="slider-card image-card-theme">
-                                <img src="assets/pagina3.jpg" alt="Ficha de Amostra ENEM 3" class="slider-img" loading="lazy" width="400" height="566">
+                                <img src="assets/pagina3.jpg" alt="Ficha de Amostra ENEM 3" class="slider-img" loading="lazy" width="400" height="566" fetchpriority="low">
                             </div>
 
                             <!-- Ficha 4 -->
                             <div class="slider-card image-card-theme">
-                                <img src="assets/pagina4.jpg" alt="Ficha de Amostra ENEM 4" class="slider-img" loading="lazy" width="400" height="566">
+                                <img src="assets/pagina4.jpg" alt="Ficha de Amostra ENEM 4" class="slider-img" loading="lazy" width="400" height="566" fetchpriority="low">
                             </div>
 
                             <!-- Ficha 5 -->
                             <div class="slider-card image-card-theme">
-                                <img src="assets/pagina5.jpg" alt="Ficha de Amostra ENEM 5" class="slider-img" loading="lazy" width="400" height="566">
+                                <img src="assets/pagina5.jpg" alt="Ficha de Amostra ENEM 5" class="slider-img" loading="lazy" width="400" height="566" fetchpriority="low">
                             </div>
 
                             <!-- Ficha 6 -->
                             <div class="slider-card image-card-theme">
-                                <img src="assets/pagina6.jpg" alt="Ficha de Amostra ENEM 6" class="slider-img" loading="lazy" width="400" height="566">
+                                <img src="assets/pagina6.jpg" alt="Ficha de Amostra ENEM 6" class="slider-img" loading="lazy" width="400" height="566" fetchpriority="low">
                             </div>
 
                             <!-- Ficha 7 -->
                             <div class="slider-card image-card-theme">
-                                <img src="assets/pagina7.jpg" alt="Ficha de Amostra ENEM 7" class="slider-img" loading="lazy" width="400" height="566">
+                                <img src="assets/pagina7.jpg" alt="Ficha de Amostra ENEM 7" class="slider-img" loading="lazy" width="400" height="566" fetchpriority="low">
                             </div>
                         </div>
                     </div>
@@ -268,7 +271,7 @@
                         <div class="bonus-card">
                             <div class="bonus-badge-free">GRÁTIS</div>
                             <div class="bonus-img-container">
-                                <img src="assets/bonus_cultura.jpg" alt="Ebook Bônus Cultura" class="bonus-cover-img" loading="lazy" width="240" height="340">
+                                <img src="assets/bonus_cultura.jpg" alt="Ebook Bônus Cultura" class="bonus-cover-img" loading="lazy" width="240" height="340" fetchpriority="low">
                             </div>
                             <div class="bonus-info">
                                 <h3>1. Fichas de Cultura</h3>
@@ -283,7 +286,7 @@
                         <div class="bonus-card">
                             <div class="bonus-badge-free">GRÁTIS</div>
                             <div class="bonus-img-container">
-                                <img src="assets/bonus_genetica.jpg" alt="Ebook Bônus Genética" class="bonus-cover-img" loading="lazy" width="240" height="340">
+                                <img src="assets/bonus_genetica.jpg" alt="Ebook Bônus Genética" class="bonus-cover-img" loading="lazy" width="240" height="340" fetchpriority="low">
                             </div>
                             <div class="bonus-info">
                                 <h3>2. Fichas de Genética</h3>
@@ -298,7 +301,7 @@
                         <div class="bonus-card">
                             <div class="bonus-badge-free">GRÁTIS</div>
                             <div class="bonus-img-container">
-                                <img src="assets/bonus_globalizacao.jpg" alt="Ebook Bônus Globalização" class="bonus-cover-img" loading="lazy" width="240" height="340">
+                                <img src="assets/bonus_globalizacao.jpg" alt="Ebook Bônus Globalização" class="bonus-cover-img" loading="lazy" width="240" height="340" fetchpriority="low">
                             </div>
                             <div class="bonus-info">
                                 <h3>3. Fichas de Globalização</h3>
@@ -316,7 +319,7 @@
                         <div class="bonus-card">
                             <div class="bonus-badge-free">GRÁTIS</div>
                             <div class="bonus-img-container">
-                                <img src="assets/bonus_colonia.jpg" alt="Ebook Bônus Brasil Colônia" class="bonus-cover-img" loading="lazy" width="240" height="340">
+                                <img src="assets/bonus_colonia.jpg" alt="Ebook Bônus Brasil Colônia" class="bonus-cover-img" loading="lazy" width="240" height="340" fetchpriority="low">
                             </div>
                             <div class="bonus-info">
                                 <h3>4. Fichas de Brasil Colônia</h3>
@@ -331,7 +334,7 @@
                         <div class="bonus-card">
                             <div class="bonus-badge-free">GRÁTIS</div>
                             <div class="bonus-img-container">
-                                <img src="assets/bonus_imperio.jpg" alt="Ebook Bônus Brasil Império" class="bonus-cover-img" loading="lazy" width="240" height="340">
+                                <img src="assets/bonus_imperio.jpg" alt="Ebook Bônus Brasil Império" class="bonus-cover-img" loading="lazy" width="240" height="340" fetchpriority="low">
                             </div>
                             <div class="bonus-info">
                                 <h3>5. Fichas de Brasil Império</h3>
