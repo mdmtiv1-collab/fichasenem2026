@@ -1206,6 +1206,29 @@ img {
     font-size: 0.65rem;
 }
 
+/* Redução adicional específica para os itens de bônus no card de oferta */
+.offer-bonus-item {
+    padding-bottom: 8px !important;
+}
+
+.offer-bonus-item .include-text strong {
+    font-size: 0.76rem;
+    font-weight: 600;
+}
+
+.offer-bonus-item .include-text span {
+    font-size: 0.66rem;
+}
+
+.offer-bonus-item .include-check {
+    font-size: 0.85rem;
+}
+
+.offer-bonus-item .include-value.value-free {
+    font-size: 0.58rem;
+    padding: 1px 6px;
+}
+
 .includes-total {
     margin-top: 25px;
     display: flex;
