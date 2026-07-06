@@ -1157,7 +1157,7 @@ img {
 
 .include-check {
     color: var(--color-primary);
-    font-size: 1.15rem;
+    font-size: 0.95rem;
     display: flex;
     align-items: center;
 }
@@ -1174,17 +1174,17 @@ img {
 }
 
 .include-text strong {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     color: var(--color-text-main);
 }
 
 .include-text span {
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     color: var(--color-text-muted);
 }
 
 .bonus-sub-list-inline {
-    font-size: 0.76rem;
+    font-size: 0.68rem;
     color: var(--color-success);
     font-weight: 600;
     margin-top: 3px;
@@ -1192,7 +1192,7 @@ img {
 }
 
 .include-value {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 600;
     color: var(--color-text-light);
 }
@@ -1203,7 +1203,7 @@ img {
     background-color: rgba(16, 185, 129, 0.08);
     padding: 2px 8px;
     border-radius: 4px;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
 }
 
 .includes-total {
