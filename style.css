@@ -165,10 +165,10 @@ img {
     background: linear-gradient(90deg, #1d4ed8 0%, #3b82f6 100%);
     color: white;
     text-align: center;
-    padding: 12px 0;
+    padding: 8px 0;
     font-family: var(--font-title);
     font-weight: 700;
-    font-size: 0.95rem;
+    font-size: 0.78rem;
     letter-spacing: 0.05em;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     position: relative;
