@@ -1787,3 +1787,21 @@ img {
 .simple-footer p {
     margin: 0;
 }
+
+/* ==========================================
+   APPROVAL BADGE
+   ========================================== */
+.approval-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-success);
+    color: white;
+    font-weight: 600;
+    font-size: 0.82rem;
+    padding: 6px 20px;
+    border-radius: 50px;
+    margin-top: 12px;
+    box-shadow: 0 4px 10px rgba(5, 150, 105, 0.15);
+    letter-spacing: 0.02em;
+}
