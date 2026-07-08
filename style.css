@@ -1805,3 +1805,99 @@ img {
     box-shadow: 0 4px 10px rgba(5, 150, 105, 0.15);
     letter-spacing: 0.02em;
 }
+
+/* ==========================================
+   APPROVAL SECTION (SOCIAL PROOF CAROUSEL)
+   ========================================== */
+.approval-section {
+    padding: 80px 0;
+    background-color: var(--color-bg-secondary);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.approval-tag {
+    background-color: rgba(5, 150, 105, 0.08);
+    color: var(--color-success);
+}
+
+.approval-slider-wrapper-section {
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+}
+
+.approval-slider-wrapper {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.approval-slider-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.approval-slider-wrapper:active {
+    cursor: grabbing;
+}
+
+.approval-slider-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    padding: 0 20px;
+}
+
+.approval-card {
+    background-color: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+    width: 280px;
+    transition: var(--transition);
+    flex-shrink: 0;
+}
+
+.approval-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-border-hover);
+}
+
+.approval-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Scroll indicator */
+.approval-indicator-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.approval-indicator-track {
+    width: 160px;
+    height: 4px;
+    background-color: var(--color-border);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.approval-indicator-thumb {
+    width: 40px;
+    height: 100%;
+    background-color: var(--color-success);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    transition: left 0.1s ease-out;
+}

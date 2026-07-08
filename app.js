@@ -132,12 +132,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
+    // GRAB TO SCROLL HELPER
+    // ==========================================
+    const initGrabScroll = (slider) => {
+        if (!slider) return;
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.style.cursor = 'grabbing';
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.style.cursor = 'grab';
+        });
+
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.style.cursor = 'grab';
+        });
+
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // scroll speed multiplier
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    };
+
+    // ==========================================
     // SAMPLE CARD SLIDER SCROLL INDICATOR SYNC
     // ==========================================
     const slider = document.querySelector('.slider-wrapper');
     const thumb = document.getElementById('slider-thumb');
     
     if (slider && thumb) {
+        initGrabScroll(slider);
         slider.addEventListener('scroll', () => {
             const maxScroll = slider.scrollWidth - slider.clientWidth;
             if (maxScroll <= 0) return;
@@ -151,6 +187,29 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const newLeft = (scrollPercent / 100) * maxTravelPercent;
             thumb.style.left = `${newLeft}%`;
+        });
+    }
+
+    // ==========================================
+    // APPROVAL SLIDER SCROLL INDICATOR SYNC
+    // ==========================================
+    const approvalSlider = document.getElementById('approval-slider');
+    const approvalThumb = document.getElementById('approval-thumb');
+    
+    if (approvalSlider && approvalThumb) {
+        initGrabScroll(approvalSlider);
+        approvalSlider.addEventListener('scroll', () => {
+            const maxScroll = approvalSlider.scrollWidth - approvalSlider.clientWidth;
+            if (maxScroll <= 0) return;
+            
+            const scrollPercent = (approvalSlider.scrollLeft / maxScroll) * 100;
+            
+            const trackWidth = approvalThumb.parentElement.clientWidth;
+            const thumbWidth = approvalThumb.clientWidth;
+            const maxTravelPercent = ((trackWidth - thumbWidth) / trackWidth) * 100;
+            
+            const newLeft = (scrollPercent / 100) * maxTravelPercent;
+            approvalThumb.style.left = `${newLeft}%`;
         });
     }
 
